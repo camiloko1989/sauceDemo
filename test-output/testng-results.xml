@@ -1,75 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-29T21:34:53 COT" name="Suite" finished-at="2024-05-29T21:35:01 COT" duration-ms="8081">
+  <suite started-at="2024-05-29T22:47:14 COT" name="Default suite" finished-at="2024-05-29T22:47:17 COT" duration-ms="2639">
     <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-05-29T21:34:53 COT" name="Test" finished-at="2024-05-29T21:35:01 COT" duration-ms="8081">
-      <class name="saucedemo.test.ProductTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:55 COT" name="launchApplication" finished-at="2024-05-29T21:34:56 COT" duration-ms="849" status="PASS">
+    <test started-at="2024-05-29T22:47:14 COT" name="Default test" finished-at="2024-05-29T22:47:17 COT" duration-ms="2639">
+      <class name="cucumber.TestNGRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-05-29T22:47:14 COT" name="setUpClass" finished-at="2024-05-29T22:47:14 COT" duration-ms="370" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@4beaf6bd]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:56 COT" name="setUp" finished-at="2024-05-29T21:34:57 COT" duration-ms="772" status="PASS">
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-05-29T22:47:14 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-05-29T22:47:17 COT" duration-ms="2214" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Login succesfully"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Check the login page functionalty"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="orderProductsAscending()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:57 COT" name="orderProductsAscending" finished-at="2024-05-29T21:34:57 COT" duration-ms="143" status="PASS">
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-05-29T22:47:17 COT" name="tearDownClass" finished-at="2024-05-29T22:47:17 COT" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- orderProductsAscending -->
-        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:57 COT" name="finishBrowser" finished-at="2024-05-29T21:34:57 COT" duration-ms="150" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:57 COT" name="launchApplication" finished-at="2024-05-29T21:34:58 COT" duration-ms="1149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:58 COT" name="setUp" finished-at="2024-05-29T21:34:59 COT" duration-ms="362" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="orderProductsDescending()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:59 COT" name="orderProductsDescending" finished-at="2024-05-29T21:34:59 COT" duration-ms="142" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderProductsDescending -->
-        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:59 COT" name="finishBrowser" finished-at="2024-05-29T21:34:59 COT" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishBrowser -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:34:59 COT" name="launchApplication" finished-at="2024-05-29T21:35:00 COT" duration-ms="1036" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:35:00 COT" name="setUp" finished-at="2024-05-29T21:35:00 COT" duration-ms="354" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="selectProduct()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:35:00 COT" name="selectProduct" finished-at="2024-05-29T21:35:01 COT" duration-ms="330" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectProduct -->
-        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@6f03482]" started-at="2024-05-29T21:35:01 COT" name="finishBrowser" finished-at="2024-05-29T21:35:01 COT" duration-ms="174" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishBrowser -->
-      </class> <!-- saucedemo.test.ProductTest -->
-      <class name="saucedemo.test.LoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.LoginTest@557caf28]" started-at="2024-05-29T21:34:53 COT" name="launchApplication" finished-at="2024-05-29T21:34:55 COT" duration-ms="1829" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="successfulLogin()[pri:0, instance:saucedemo.test.LoginTest@557caf28]" started-at="2024-05-29T21:34:55 COT" name="successfulLogin" finished-at="2024-05-29T21:34:55 COT" duration-ms="360" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- successfulLogin -->
-        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.LoginTest@557caf28]" started-at="2024-05-29T21:34:55 COT" name="finishBrowser" finished-at="2024-05-29T21:34:55 COT" duration-ms="223" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- finishBrowser -->
-      </class> <!-- saucedemo.test.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- cucumber.TestNGRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
