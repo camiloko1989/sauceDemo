@@ -118,7 +118,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="saucedemo.test.LoginTest" class="method navigator-link" hash-for-method="successfullLogin">successfullLogin</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="saucedemo.test.LoginTest" class="method navigator-link" hash-for-method="successfulLogin">successfulLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -170,9 +170,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="successfullLogin">
-                  </a> <!-- successfullLogin -->
-                  <span class="method-name">successfullLogin</span>
+                  <a name="successfulLogin">
+                  </a> <!-- successfulLogin -->
+                  <span class="method-name">successfulLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -232,26 +232,26 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'selectProduct')
-data.setCell(0, 2, 'saucedemo.test.ProductTest')
-data.setCell(0, 3, 710);
+data.setCell(0, 1, 'successfulLogin')
+data.setCell(0, 2, 'saucedemo.test.LoginTest')
+data.setCell(0, 3, 360);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'orderProductsDescending')
+data.setCell(1, 1, 'selectProduct')
 data.setCell(1, 2, 'saucedemo.test.ProductTest')
-data.setCell(1, 3, 478);
+data.setCell(1, 3, 330);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'orderProductsAscending')
 data.setCell(2, 2, 'saucedemo.test.ProductTest')
-data.setCell(2, 3, 471);
+data.setCell(2, 3, 143);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'successfullLogin')
-data.setCell(3, 2, 'saucedemo.test.LoginTest')
-data.setCell(3, 3, 337);
+data.setCell(3, 1, 'orderProductsDescending')
+data.setCell(3, 2, 'saucedemo.test.ProductTest')
+data.setCell(3, 3, 142);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 975 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -283,51 +283,63 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">successfullLogin</span>
-                <span class="method-start">1866 ms</span>
+                <span class="method-name">successfulLogin</span>
+                <span class="method-start">1830 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finishBrowser</span>
-                <span class="method-start">2206 ms</span>
+                <span class="method-start">2194 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">saucedemo.test.ProductTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">2451 ms</span>
+                <span class="method-start">2419 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">3268 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderProductsAscending</span>
-                <span class="method-start">3517 ms</span>
+                <span class="method-start">4040 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finishBrowser</span>
-                <span class="method-start">3989 ms</span>
+                <span class="method-start">4184 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">4202 ms</span>
+                <span class="method-start">4335 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">5484 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderProductsDescending</span>
-                <span class="method-start">5409 ms</span>
+                <span class="method-start">5846 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finishBrowser</span>
-                <span class="method-start">5889 ms</span>
+                <span class="method-start">5989 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">6044 ms</span>
+                <span class="method-start">6155 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">7191 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">selectProduct</span>
-                <span class="method-start">7290 ms</span>
+                <span class="method-start">7545 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">finishBrowser</span>
-                <span class="method-start">8001 ms</span>
+                <span class="method-start">7876 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
