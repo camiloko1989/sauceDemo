@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -30,6 +31,11 @@ public class BaseTest {
 		loginPage.goTo();
 		
 		return loginPage;
+	}
+	
+	@AfterMethod
+	public void finishBrowser() {
+		driver.quit();
 	}
 
 }

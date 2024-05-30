@@ -8,45 +8,52 @@ import org.openqa.selenium.support.PageFactory;
 
 import saucedemo.AbstractComponents.AbstractComponents;
 
-public class LoginPage extends AbstractComponents{
+/**
+ * This class represents the login page of the SauceDemo application.
+ * It provides methods to interact with the login page elements and perform login actions.
+ */
+public class LoginPage extends AbstractComponents {
 
-	WebDriver driver;
-	
-	
-	public LoginPage(WebDriver driver) {
-		super(driver);
-		this.driver = driver;
-		PageFactory.initElements(driver, this);
-	}
-	
-	@FindBy(id="user-name")
-	WebElement nameInput;
-	
-	@FindBy(id = "password")
-	WebElement passwordInput;
-	
-	@FindBy(id="login-button")
-	WebElement loginButton;
-	
-	
-	public void getCrendentials() {
-		
-	}
-	
-	public ProductPage loginInApp(String username, String password) {
-		nameInput.sendKeys(username);
-		passwordInput.sendKeys(password);
-		loginButton.click();
-		ProductPage productPage = new ProductPage(driver);
-		return productPage;
-	}
-	
-	public void goTo() {
-		System.out.println("LLego aca");
-		driver.get("https://www.saucedemo.com/");
-	}
-	
-	
-	
-	
+    private WebDriver driver;
+
+    /**
+     * Constructor to initialize the LoginPage.
+     * 
+     * @param driver The WebDriver instance to interact with the browser.
+     */
+    public LoginPage(WebDriver driver) {
+        super(driver);
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(id = "user-name")
+    private WebElement nameInput;
+
+    @FindBy(id = "password")
+    private WebElement passwordInput;
+
+    @FindBy(id = "login-button")
+    private WebElement loginButton;
+
+     /**
+     * Logs into the application using the provided username and password.
+     * 
+     * @param username The username to login with.
+     * @param password The password to login with.
+     * @return ProductPage The page object representing the product page after successful login.
+     */
+    public ProductPage loginInApp(String username, String password) {
+        nameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
+        loginButton.click();
+        return new ProductPage(driver);
+    }
+
+    /**
+     * Navigates to the login page of the SauceDemo application.
+     */
+    public void goTo() {
+        driver.get("https://www.saucedemo.com/");
+    }
 }

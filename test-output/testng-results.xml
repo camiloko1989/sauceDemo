@@ -1,21 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-29T11:07:34 COT" name="Default suite" finished-at="2024-05-29T11:07:37 COT" duration-ms="2068">
+  <suite started-at="2024-05-29T21:27:13 COT" name="Suite" finished-at="2024-05-29T21:27:21 COT" duration-ms="8275">
     <groups>
     </groups>
-    <test started-at="2024-05-29T11:07:34 COT" name="Default test" finished-at="2024-05-29T11:07:37 COT" duration-ms="2068">
-      <class name="saucedemo.test.LoginTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.LoginTest@4afcd809]" started-at="2024-05-29T11:07:34 COT" name="launchApplication" finished-at="2024-05-29T11:07:36 COT" duration-ms="1673" status="PASS">
+    <test started-at="2024-05-29T21:27:13 COT" name="Test" finished-at="2024-05-29T21:27:21 COT" duration-ms="8275">
+      <class name="saucedemo.test.ProductTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:15 COT" name="launchApplication" finished-at="2024-05-29T21:27:16 COT" duration-ms="1065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="successfullLogin()[pri:0, instance:saucedemo.test.LoginTest@4afcd809]" started-at="2024-05-29T11:07:36 COT" name="successfullLogin" finished-at="2024-05-29T11:07:37 COT" duration-ms="364" status="PASS">
+        <test-method signature="orderProductsAscending()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:16 COT" name="orderProductsAscending" finished-at="2024-05-29T21:27:17 COT" duration-ms="471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderProductsAscending -->
+        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:17 COT" name="finishBrowser" finished-at="2024-05-29T21:27:17 COT" duration-ms="212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:17 COT" name="launchApplication" finished-at="2024-05-29T21:27:18 COT" duration-ms="1207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="orderProductsDescending()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:18 COT" name="orderProductsDescending" finished-at="2024-05-29T21:27:18 COT" duration-ms="478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderProductsDescending -->
+        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:18 COT" name="finishBrowser" finished-at="2024-05-29T21:27:19 COT" duration-ms="155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:19 COT" name="launchApplication" finished-at="2024-05-29T21:27:20 COT" duration-ms="1246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="selectProduct()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:20 COT" name="selectProduct" finished-at="2024-05-29T21:27:21 COT" duration-ms="710" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProduct -->
+        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.ProductTest@185a6e9]" started-at="2024-05-29T21:27:21 COT" name="finishBrowser" finished-at="2024-05-29T21:27:21 COT" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishBrowser -->
+      </class> <!-- saucedemo.test.ProductTest -->
+      <class name="saucedemo.test.LoginTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:saucedemo.test.LoginTest@75d4a5c2]" started-at="2024-05-29T21:27:13 COT" name="launchApplication" finished-at="2024-05-29T21:27:14 COT" duration-ms="1865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="successfullLogin()[pri:0, instance:saucedemo.test.LoginTest@75d4a5c2]" started-at="2024-05-29T21:27:14 COT" name="successfullLogin" finished-at="2024-05-29T21:27:15 COT" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfullLogin -->
+        <test-method is-config="true" signature="finishBrowser()[pri:0, instance:saucedemo.test.LoginTest@75d4a5c2]" started-at="2024-05-29T21:27:15 COT" name="finishBrowser" finished-at="2024-05-29T21:27:15 COT" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finishBrowser -->
       </class> <!-- saucedemo.test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
