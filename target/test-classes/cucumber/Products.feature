@@ -50,5 +50,14 @@ Feature: Test the functionalities in Product Page
   	Examples: 
       | product     | 
       | Labs Onesie |
+      
+   Scenario Outline: Open one item page
+  	Given I am on the product page
+  	When I select a product <product> and I open it
+  	Then The item page is displayed
+  	
+  	Examples: 
+      | product     | 
+      | Labs Onesie |
 
 

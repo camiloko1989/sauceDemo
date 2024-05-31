@@ -144,4 +144,15 @@ public class ProductPage extends AbstractComponents {
         }
         return null;
     }
+    
+    public ItemPage openProduct(String productName) {
+    	WebElement selectedProductElement = getProducts().stream()
+        .filter(product -> product.findElement(By.className("inventory_item_name")).getText().contains(productName))
+        .findFirst()
+        .orElse(null);
+    	selectedProductElement.findElement(By.className("inventory_item_label")).click();
+    	return new ItemPage(driver);
+    	
+    	
+    }
 }

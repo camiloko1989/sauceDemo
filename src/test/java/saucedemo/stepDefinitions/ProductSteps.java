@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import saucedemo.TestComponents.BaseTest;
+import saucedemo.pageObjects.ItemPage;
 import saucedemo.pageObjects.LoginPage;
 import saucedemo.pageObjects.ProductPage;
 
@@ -16,6 +17,7 @@ public class ProductSteps extends BaseTest {
 
     // Page object representing the product page
     public ProductPage productPage;
+    public ItemPage itemPage;
     
     // Page object representing the login page
     public LoginPage loginPage;
@@ -161,5 +163,18 @@ public class ProductSteps extends BaseTest {
         
         // Close the browser
         driver.close();
+    }
+    
+    @When("^I select a product (.+) and I open it$")
+    public void openItempage(String product) {
+    	itemPage = productPage.openProduct(product);
+    }
+    
+    @Then("The item page is displayed")
+    public void itemPageOpens() {
+    	String itemPageTitle = itemPage.getBackButton().getText();
+    	Assert.assertEquals(itemPageTitle, "Back to products");
+    	driver.close();
+    	
     }
 }
