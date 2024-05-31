@@ -29,3 +29,14 @@ Feature: Check the login page functionalty
     Examples: 
       | username      | password     | title    |
       | standard_user | secret_sauce | Products |
+
+      
+  @errorvalidations
+  Scenario Outline: Login unsuccesfully
+    Given I am placed in the Login Page
+    When I write an invalid username <username> or an invalid password <password>
+    Then I validate the error <message> message
+
+    Examples: 
+      | username   | password    | message    |
+      | error_user | error_sauce | Username and password do not match any user in this service |

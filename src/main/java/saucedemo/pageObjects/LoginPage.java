@@ -35,8 +35,21 @@ public class LoginPage extends AbstractComponents {
 
     @FindBy(id = "login-button")
     private WebElement loginButton;
+    
+    @FindBy(css = "div.error-message-container.error h3")
+    private WebElement errorMessage;
+    
+    
 
-     /**
+    public WebElement getErrorMessage() {
+		return errorMessage;
+	}
+
+	public void setErrorMessage(WebElement errorButton) {
+		this.errorMessage = errorButton;
+	}
+
+	/**
      * Logs into the application using the provided username and password.
      * 
      * @param username The username to login with.

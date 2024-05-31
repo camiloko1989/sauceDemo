@@ -52,4 +52,16 @@ public class LoginSteps extends BaseTest {
         Assert.assertTrue(match, "Title mismatch: Expected '" + title + "', but found '" + titleProductPage + "'");
         driver.close(); // Close the browser session
     }
+    
+    @When("^I write an invalid username (.+) or an invalid password (.+)$") 
+    public void loginWithInvalidCredentials(String userName, String password) {
+    	productPage = loginPage.loginInApp(userName, password);
+    }
+    
+    @Then("^I validate the error (.+) message$") 
+    public void validateErrorMessage(String message) {
+    	String expectedMessage = loginPage.getErrorMessage().getText();
+    	Assert.assertEquals(expectedMessage, "Epic sadface: Username and password do not match any user in this service");
+    	driver.close(); // Close the browser session
+    }
 }
