@@ -168,6 +168,7 @@ public class ProductSteps extends BaseTest {
     @When("^I select a product (.+) and I open it$")
     public void openItempage(String product) {
     	itemPage = productPage.openProduct(product);
+    	
     }
     
     @Then("The item page is displayed")

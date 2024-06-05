@@ -18,17 +18,23 @@ public class ItemPage extends AbstractComponents {
 	@FindBy(id = "add-to-cart")
 	private WebElement addButton;
 	
+	@FindBy(id="remove")
+	private WebElement removeButton;
+	
 	@FindBy(className = "header_secondary_container")
 	private WebElement backButton;
 
 	public WebElement getBackButton() {
 		return backButton;
 	}
+	
+	public WebElement getRemoveButton() {
+		return removeButton;
+	}
 
 	public WebElement getAddButton() {
 		return addButton;
 	}
-
 	
 	public void addProduct() {
 		addButton.click();

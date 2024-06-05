@@ -113,6 +113,7 @@ public class ProductPage extends AbstractComponents {
      * @return The WebElement representing the selected product.
      */
     public WebElement selectProduct(String productName) {
+    	waitForElementToAppear(By.className("inventory_item_name"));
         return getProducts().stream()
             .filter(product -> product.findElement(By.className("inventory_item_name")).getText().contains(productName))
             .findFirst()
@@ -146,13 +147,13 @@ public class ProductPage extends AbstractComponents {
     }
     
     public ItemPage openProduct(String productName) {
+    	waitForElementToAppear(By.className("inventory_item_name"));
     	WebElement selectedProductElement = getProducts().stream()
         .filter(product -> product.findElement(By.className("inventory_item_name")).getText().contains(productName))
         .findFirst()
         .orElse(null);
     	selectedProductElement.findElement(By.className("inventory_item_label")).click();
     	return new ItemPage(driver);
-    	
     	
     }
 }
