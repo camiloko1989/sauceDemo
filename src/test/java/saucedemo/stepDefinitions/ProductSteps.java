@@ -1,6 +1,10 @@
 package saucedemo.stepDefinitions;
 
+import java.util.List;
+
 import org.testng.Assert;
+
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,6 +12,7 @@ import saucedemo.TestComponents.BaseTest;
 import saucedemo.pageObjects.ItemPage;
 import saucedemo.pageObjects.LoginPage;
 import saucedemo.pageObjects.ProductPage;
+import saucedemo.pageObjects.CartPage;
 
 /**
  * Step definitions for product-related scenarios in the SauceDemo application.
@@ -15,11 +20,10 @@ import saucedemo.pageObjects.ProductPage;
  */
 public class ProductSteps extends BaseTest {
 
-    // Page object representing the product page
+    // Page objects 
     public ProductPage productPage;
     public ItemPage itemPage;
-    
-    // Page object representing the login page
+    public CartPage cartPage;
     public LoginPage loginPage;
     
     /**
@@ -150,6 +154,17 @@ public class ProductSteps extends BaseTest {
         productPage.addProductToCart("Labs Onesie");
     }
     
+    
+    @When("I select the following products and add it to the cart")
+    public void selectProductsAndAddToCart(DataTable dataTable) {
+    	List<String> products = dataTable.asList(String.class);
+    	for (int i=1; i<=products.size(); i++) {
+            productPage.selectProduct(products.get(i));
+            productPage.addProductToCart(products.get(i));
+            i++;
+        }
+    }
+    
     /**
      * Then step to validate that the selected product is added to the cart.
      */
@@ -178,4 +193,11 @@ public class ProductSteps extends BaseTest {
     	driver.close();
     	
     }
+    
+    @When("I click on the cart icon")
+	public void openCart() {
+    	System.out.println("antes de crear Cart");
+		cartPage = productPage.goToCart();
+		System.out.println("despues de crear Cart");
+	}
 }

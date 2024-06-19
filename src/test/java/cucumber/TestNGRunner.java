@@ -12,6 +12,7 @@ import io.cucumber.testng.CucumberOptions;
     glue = "saucedemo.stepDefinitions", // Package containing step definitions
     monochrome = true, // Ensure console output is readable (removes color codes)
     plugin = {"html:target/cucumber.html"} // Generate HTML report at target/cucumber.html
+    //tags="@runThis"
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
     // No additional code is needed as AbstractTestNGCucumberTests handles Cucumber integration with TestNG.

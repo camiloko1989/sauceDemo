@@ -117,7 +117,7 @@ public class ProductPage extends AbstractComponents {
         return getProducts().stream()
             .filter(product -> product.findElement(By.className("inventory_item_name")).getText().contains(productName))
             .findFirst()
-            .orElse(null);
+            .orElseThrow(() -> new RuntimeException("Product not found: " + productName));
     }
 
     /**
@@ -126,9 +126,11 @@ public class ProductPage extends AbstractComponents {
      * @param productName The name of the product to add to the cart.
      */
     public void addProductToCart(String productName) {
-        WebElement selectedProduct = selectProduct(productName);
-        if (selectedProduct != null) {
-            selectedProduct.findElement(By.xpath("//div[@class='pricebar']/button")).click();
+    	try {
+            WebElement selectedProduct = selectProduct(productName);
+            selectedProduct.findElement(By.cssSelector(".pricebar .btn_inventory")).click();
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
         }
     }
 

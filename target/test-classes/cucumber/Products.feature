@@ -48,8 +48,20 @@ Feature: Test the functionalities in Product Page
   	Then The product is added to the cart
   	
   	Examples: 
-      | product     | 
-      | Labs Onesie |
+      | product      | 
+      | Labs Onesie  |
+      
+ Scenario Outline: Add multiple products to the cart
+  	Given I am on the product page
+  	When I select the following products and add it to the cart
+  		| product      | 
+      | Labs Onesie  |
+      | Bolt T-Shirt |
+      | Bike Light   |
+  	Then The product is added to the cart
+  	
+  	Examples: 
+      
       
    Scenario Outline: Open one item page
   	Given I am on the product page
@@ -57,7 +69,7 @@ Feature: Test the functionalities in Product Page
   	Then The item page is displayed
   	
   	Examples: 
-      | product     | 
-      | Labs Onesie |
+      | product      | 
+      | Labs Onesie  |
 
 
