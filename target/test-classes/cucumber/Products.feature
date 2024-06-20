@@ -40,7 +40,7 @@ Feature: Test the functionalities in Product Page
     When I click on the descending price order option
     Then I see the products ordered by price in descending way
     
-  @Testthis  
+   
   Scenario: Add one product to the cart
   	Given I am on the product page
   	When I select a product "Labs Backpack" and add it to the cart
