@@ -1,155 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="9" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-18T21:59:04 COT" name="Default suite" finished-at="2024-06-18T21:59:26 COT" duration-ms="21976">
+  <suite started-at="2024-06-19T21:39:33 COT" name="Default suite" finished-at="2024-06-19T21:39:37 COT" duration-ms="4622">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-06-18T21:59:04 COT" name="Default test" finished-at="2024-06-18T21:59:26 COT" duration-ms="21976">
+    <test started-at="2024-06-19T21:39:33 COT" name="Default test" finished-at="2024-06-19T21:39:37 COT" duration-ms="4622">
       <class name="cucumber.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:04 COT" name="setUpClass" finished-at="2024-06-18T21:59:05 COT" duration-ms="524" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-19T21:39:33 COT" name="setUpClass" finished-at="2024-06-19T21:39:33 COT" duration-ms="511" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@30159886]]>
+                <![CDATA[org.testng.TestRunner@57562473]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:05 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:08 COT" duration-ms="3406" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate total price of added products"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Title of your feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:08 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:10 COT" duration-ms="2012" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Title of your scenario"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Item Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:10 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:12 COT" duration-ms="1949" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login succesfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Check the login page functionalty"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:12 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:14 COT" duration-ms="1686" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login unsuccesfully"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Check the login page functionalty"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:14 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:16 COT" duration-ms="1801" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Order the products by name ascending"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Product Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:16 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:18 COT" duration-ms="2150" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Order the products by name descending"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Product Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:18 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:20 COT" duration-ms="2262" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Order the products by price ascending"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Product Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:20 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:22 COT" duration-ms="1838" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Order the products by price ascending"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Product Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:22 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:24 COT" duration-ms="2069" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-19T21:39:33 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-19T21:39:37 COT" duration-ms="4048" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -162,42 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[The product was not added to the cart successfully expected [Remove] but found [Add to cart]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: The product was not added to the cart successfully expected [Remove] but found [Add to cart]
-at org.testng.Assert.fail(Assert.java:111)
-at org.testng.Assert.failNotEquals(Assert.java:1578)
-at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-at org.testng.Assert.assertEquals(Assert.java:132)
-at org.testng.Assert.assertEquals(Assert.java:656)
-at saucedemo.stepDefinitions.ProductSteps.validateProductIsAdded(ProductSteps.java:177)
-at ✽.The product is added to the cart(file:///C:/Users/camil/eclipse-workspace/SauceDemoProject/src/test/java/cucumber/Products.feature:48)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:24 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-06-18T21:59:26 COT" duration-ms="2202" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Open one item page"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Test the functionalities in Product Page"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-18T21:59:26 COT" name="tearDownClass" finished-at="2024-06-18T21:59:26 COT" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGRunner@3a52dba3]" started-at="2024-06-19T21:39:37 COT" name="tearDownClass" finished-at="2024-06-19T21:39:37 COT" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

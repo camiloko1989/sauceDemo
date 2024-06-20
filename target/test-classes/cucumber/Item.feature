@@ -17,9 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template
 @tag
-Feature: Test the functionalities in Item Page
-  I want to use this template for my feature file
-  
+Feature: Test the functionalities in Item Page  
 
   @tag1
   Scenario Outline: Title of your scenario

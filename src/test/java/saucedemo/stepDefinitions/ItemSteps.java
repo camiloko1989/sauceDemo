@@ -1,5 +1,7 @@
 package saucedemo.stepDefinitions;
 
+import java.io.IOException;
+
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
@@ -17,7 +19,7 @@ public class ItemSteps extends BaseTest{
 	public LoginPage loginPage;
 
 	@Given("^I am on the item (.+) page$") 
-	public void itemPage(String product) {
+	public void itemPage(String product) throws IOException {
 		// Initialize the WebDriver
         driver = initializeDriver();
         

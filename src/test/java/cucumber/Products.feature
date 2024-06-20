@@ -18,8 +18,6 @@
 #Sample Feature Definition Template
 @tag
 Feature: Test the functionalities in Product Page
-  I want to use this template for my feature file
-  
 
   @tag2
   Scenario: Order the products by name ascending
@@ -42,16 +40,13 @@ Feature: Test the functionalities in Product Page
     When I click on the descending price order option
     Then I see the products ordered by price in descending way
     
-  Scenario Outline: Add one product to the cart
+  @Testthis  
+  Scenario: Add one product to the cart
   	Given I am on the product page
-  	When I select a product <product> and add it to the cart
+  	When I select a product "Labs Backpack" and add it to the cart
   	Then The product is added to the cart
-  	
-  	Examples: 
-      | product      | 
-      | Labs Onesie  |
       
- Scenario Outline: Add multiple products to the cart
+ 	Scenario: Add multiple products to the cart
   	Given I am on the product page
   	When I select the following products and add it to the cart
   		| product      | 

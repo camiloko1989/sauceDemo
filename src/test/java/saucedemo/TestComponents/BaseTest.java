@@ -1,8 +1,17 @@
 package saucedemo.TestComponents;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -25,9 +34,31 @@ public class BaseTest {
      * It sets up the ChromeDriver, maximizes the browser window, and returns the WebDriver instance.
      * 
      * @return WebDriver instance
+     * @throws IOException 
      */
-    public WebDriver initializeDriver() {
-        WebDriverManager.chromedriver().setup();
+    public WebDriver initializeDriver() throws IOException {
+    	Properties properties = new Properties();
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+ 
+				"\\src\\main\\java\\saucedemo\\resources\\GlobalData.properties");
+		properties.load(fis);
+		String browserType = System.getProperty("broswer")!= null ? System.getProperty("browser") : properties.getProperty("browser");
+		
+	    switch (browserType.toLowerCase()) {
+            case "chrome":
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+                break;
+            case "firefox":
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid browser type: " + browserType);
+        }
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
@@ -60,5 +91,18 @@ public class BaseTest {
     	if (driver != null) {
             driver.quit();
         }
+    }
+    
+    /**
+     * Takes a screenshot of the current browser window.
+     *
+     * @param testName the name of the test method
+     * @throws IOException if an I/O error occurs during saving the screenshot
+     */
+    public void takeScreenshot(String testName) throws IOException {
+        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        String destPath = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
+        File destFile = new File(destPath);
+        FileUtils.copyFile(srcFile, destFile);
     }
 }

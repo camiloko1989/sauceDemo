@@ -1,5 +1,6 @@
 package saucedemo.stepDefinitions;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.testng.Assert;
@@ -29,9 +30,10 @@ public class ProductSteps extends BaseTest {
     /**
      * Given step to initialize the browser, navigate to the login page, and perform login.
      * Ensures the user is on the product page.
+     * @throws IOException 
      */
     @Given("I am on the product page")
-    public void productPage() {
+    public void productPage() throws IOException {
         // Initialize the WebDriver
         driver = initializeDriver();
         
@@ -145,13 +147,13 @@ public class ProductSteps extends BaseTest {
      * When step to select a product by name and add it to the cart.
      * @param product the name of the product to be selected
      */
-    @When("^I select a product (.+) and add it to the cart$")
+    @When("^I select a product \"([^\"]*)\" and add it to the cart$")
     public void selectProduct(String product) {
         // Select the specified product
         productPage.selectProduct(product);
         
         // Add the selected product to the cart
-        productPage.addProductToCart("Labs Onesie");
+        productPage.addProductToCart(product);
     }
     
     
@@ -171,7 +173,7 @@ public class ProductSteps extends BaseTest {
     @Then("The product is added to the cart")
     public void validateProductIsAdded() {
         // Get the text of the button for the added product
-        String buttonText = productPage.getAddedProduct("Labs Onesie");
+        String buttonText = productPage.getAddedProduct("Labs Backpack");
         
         // Assert that the product was successfully added to the cart
         Assert.assertEquals(buttonText, "Remove", "The product was not added to the cart successfully");

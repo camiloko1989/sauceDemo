@@ -3,8 +3,7 @@
 #Feature: List of scenarios.
 
 @tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+Feature: Test functionality in Checkout and Overview pages
 
   @runThis
   Scenario: Validate total price of added products
