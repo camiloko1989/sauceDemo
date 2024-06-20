@@ -6,8 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import io.reactivex.rxjava3.observers.BaseTestConsumer;
 import saucedemo.AbstractComponents.AbstractComponents;
 
 public class CartPage extends AbstractComponents{
