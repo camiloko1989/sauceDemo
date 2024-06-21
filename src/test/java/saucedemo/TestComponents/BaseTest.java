@@ -41,7 +41,7 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+ 
 				"\\src\\main\\java\\saucedemo\\resources\\GlobalData.properties");
 		properties.load(fis);
-		String browserType = System.getProperty("broswer")!= null ? System.getProperty("browser") : properties.getProperty("browser");
+		String browserType = System.getProperty("browser")!= null ? System.getProperty("browser") : properties.getProperty("browser");
 		
 	    switch (browserType.toLowerCase()) {
             case "chrome":
@@ -59,7 +59,6 @@ public class BaseTest {
             default:
                 throw new IllegalArgumentException("Invalid browser type: " + browserType);
         }
-        driver = new ChromeDriver();
         driver.manage().window().maximize();
         return driver;
     }

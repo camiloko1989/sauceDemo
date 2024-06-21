@@ -20,6 +20,7 @@ public class OverviewSteps extends BaseTest {
 		Double totalPriceString = overviewPage.getTotalPrice();
 		Double sumPriceString = overviewPage.getItemsPrice();
 		Assert.assertEquals(sumPriceString, totalPriceString);
+		driver.close();
 	}
 	
 }

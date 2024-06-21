@@ -45,6 +45,7 @@ public class ProductSteps extends BaseTest {
         
         // Perform login and navigate to the product page
         productPage = loginPage.loginInApp("standard_user", "secret_sauce");
+        
     }
     
     /**
@@ -53,7 +54,7 @@ public class ProductSteps extends BaseTest {
     @When("I click on the ascending name order option")
     public void orderProductsByNameAscending() {
         // Order products by name in ascending order
-        productPage.orderByName("Name Ascending");
+        productPage.orderByName("Name Ascending");        
     }
     
     /**
