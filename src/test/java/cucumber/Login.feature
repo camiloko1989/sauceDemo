@@ -28,7 +28,7 @@ Feature: Check the login page functionalty
 
     Examples: 
       | username      | password     | title    |
-      | standard_user | secret_sauce | Products |
+      | standard_users | secret_sauce | Products |
 
       
   @errorvalidations

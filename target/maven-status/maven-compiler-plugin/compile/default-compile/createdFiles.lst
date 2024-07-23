@@ -1,0 +1,7 @@
+saucedemo\pageObjects\CartPage.class
+saucedemo\pageObjects\ProductPage.class
+saucedemo\pageObjects\ItemPage.class
+saucedemo\AbstractComponents\AbstractComponents.class
+saucedemo\pageObjects\OverviewPage.class
+saucedemo\pageObjects\CheckoutPage.class
+saucedemo\pageObjects\LoginPage.class

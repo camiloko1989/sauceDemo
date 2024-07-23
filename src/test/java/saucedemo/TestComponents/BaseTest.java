@@ -10,10 +10,17 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import saucedemo.pageObjects.LoginPage;
@@ -27,6 +34,8 @@ public class BaseTest {
 
     public static WebDriver driver;
     public LoginPage loginPage; 
+    public ExtentReports extent;
+    public ExtentTest test;
     
 
     /**
@@ -63,6 +72,12 @@ public class BaseTest {
         return driver;
     }
     
+    public BaseTest() {
+        ExtentSparkReporter sparkReporter = new ExtentSparkReporter("test-output/ExtentSpark.html");
+        extent = new ExtentReports();
+        extent.attachReporter(sparkReporter);
+    }
+    
     
     /**
      * This method is executed before each test method.
@@ -71,7 +86,7 @@ public class BaseTest {
      * @return LoginPage instance
      * @throws IOException if an I/O error occurs
      */
-    @BeforeMethod
+    @BeforeClass
     public LoginPage launchApplication() throws IOException {
         driver = initializeDriver();
         loginPage = new LoginPage(driver);
@@ -85,7 +100,7 @@ public class BaseTest {
      * This method is executed after each test method.
      * It quits the WebDriver, closing all associated browser windows.
      */
-    @AfterMethod
+    @AfterClass
     public void finishBrowser() {
     	if (driver != null) {
             driver.quit();
@@ -98,10 +113,25 @@ public class BaseTest {
      * @param testName the name of the test method
      * @throws IOException if an I/O error occurs during saving the screenshot
      */
-    public void takeScreenshot(String testName) throws IOException {
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String destPath = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
-        File destFile = new File(destPath);
-        FileUtils.copyFile(srcFile, destFile);
+    //public void takeScreenshot(String testName) throws IOException {
+    //    File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    //  String destPath = System.getProperty("user.dir") + "/screenshots/" + testName + ".png";
+    //  File destFile = new File(destPath);
+    //  FileUtils.copyFile(srcFile, destFile);
+    //}
+    
+    public void flushReports() {
+        extent.flush();
+    }
+    
+    public static WebDriver getDriver() {
+        if (driver == null) {
+            // Initialize WebDriver
+            System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--start-maximized"); // Example option
+            driver = new ChromeDriver(options);
+        }
+        return driver;
     }
 }

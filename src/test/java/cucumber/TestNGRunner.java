@@ -11,7 +11,11 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/test/java/cucumber", // Path to the directory containing feature files
     glue = "saucedemo.stepDefinitions", // Package containing step definitions
     monochrome = true, // Ensure console output is readable (removes color codes)
-    plugin = {"html:target/cucumber.html"} // Generate HTML report at target/cucumber.html
+    plugin = {
+    		        "pretty",
+    		        "html:target/cucumber-reports.html",
+    		        "json:target/cucumber-reports/Cucumber.json"
+    		    }
     //tags="@Testthis"
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
