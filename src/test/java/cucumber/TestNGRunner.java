@@ -15,8 +15,8 @@ import io.cucumber.testng.CucumberOptions;
     		        "pretty",
     		        "html:target/cucumber-reports.html",
     		        "json:target/cucumber-reports/Cucumber.json"
-    		    }
-    //tags="@Testthis"
+    		    },
+    tags="@errorvalidations"
 )
 public class TestNGRunner extends AbstractTestNGCucumberTests {
     // No additional code is needed as AbstractTestNGCucumberTests handles Cucumber integration with TestNG.

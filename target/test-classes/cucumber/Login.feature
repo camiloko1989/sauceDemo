@@ -35,8 +35,18 @@ Feature: Check the login page functionalty
   Scenario Outline: Login unsuccesfully
     Given I am placed in the Login Page
     When I write an invalid username <username> or an invalid password <password>
-    Then I validate the error <message> message
+    Then I validate the error message
 
     Examples: 
-      | username   | password    | message    |
-      | error_user | error_sauce | Username and password do not match any user in this service |
+      | username   | password    |	
+      | error_user | error_sauce |
+      
+	@errorvalidations
+	Scenario Outline: Login with locked user
+    Given I am placed in the Login Page
+    When I write an locked username <username> with a valid password <password>
+    Then I validate the locked error message
+
+    Examples: 
+      | username        | password     |
+      | locked_out_user | secret_sauce | 

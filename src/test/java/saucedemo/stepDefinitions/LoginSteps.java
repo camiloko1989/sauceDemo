@@ -58,10 +58,23 @@ public class LoginSteps extends BaseTest {
     	productPage = loginPage.loginInApp(userName, password);
     }
     
-    @Then("^I validate the error (.+) message$") 
-    public void validateErrorMessage(String message) {
+    @Then("I validate the error message") 
+    public void validateErrorMessage() {
     	String expectedMessage = loginPage.getErrorMessage().getText();
     	Assert.assertEquals(expectedMessage, "Epic sadface: Username and password do not match any user in this service");
     	driver.close(); // Close the browser session
+    }
+    
+    @When("^I write an locked username (.+) with a valid password (.+)$")
+    public void loginWithLockedUser(String username, String password) {
+    	productPage = loginPage.loginInApp(username, password);
+    }
+    
+    @Then("I validate the locked error message")
+    public void validateLockedMessage() {
+    	String expectedMessage = loginPage.getErrorMessage().getText();
+    	Assert.assertEquals(expectedMessage, "Epic sadface: Sorry, this user has been locked out.");
+    	driver.close(); // Close the browser session
+    	
     }
 }
