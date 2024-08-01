@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jul 29 23:03:52 COT 2024</td>
+<td>Started on:</td><td>Wed Jul 31 21:56:01 COT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>8 seconds (8406 ms)</td>
+<tr><td>Total time:</td><td>4 seconds (4197 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td><b>Attribute(s)</b></td>
 <td width="30%"><b>Exception</b></td>
@@ -76,14 +76,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='cucumber.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with locked user", "Check the login page functionalty"</td>
-<td></td>
+<td title='cucumber.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Logout succesfully", "Check the login page functionalty"</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;saucedemo.pageObjects.ProductPage.logOut()&quot; because &quot;this.productPage&quot; is null
+	at saucedemo.stepDefinitions.LoginSteps.clickOnLogout(LoginSteps.java:84)
+	at ✽.I click on Logout(file:///C:/Users/camil/eclipse-workspace/SauceDemoProject/src/test/java/cucumber/Login.feature:36)
+</pre></div><a href='#' onClick='toggleBox("stack-trace341120332", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace341120332'><pre>java.lang.NullPointerException: Cannot invoke &quot;saucedemo.pageObjects.ProductPage.logOut()&quot; because &quot;this.productPage&quot; is null
+	at saucedemo.stepDefinitions.LoginSteps.clickOnLogout(LoginSteps.java:84)
+	at ✽.I click on Logout(file:///C:/Users/camil/eclipse-workspace/SauceDemoProject/src/test/java/cucumber/Login.feature:36)
+</pre></div></td>
 <td>3</td>
-<td>cucumber.TestNGRunner@5fbe4146</td></tr>
-<tr>
-<td title='cucumber.TestNGRunner.runScenario()'><b>runScenario</b><br>Test class: cucumber.TestNGRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login unsuccesfully", "Check the login page functionalty"</td>
-<td></td>
-<td>4</td>
 <td>cucumber.TestNGRunner@5fbe4146</td></tr>
 </table><p>
 </body>

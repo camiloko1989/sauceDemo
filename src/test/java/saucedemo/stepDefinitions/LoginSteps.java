@@ -2,6 +2,7 @@ package saucedemo.stepDefinitions;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 import io.cucumber.java.en.Given;
@@ -76,5 +77,16 @@ public class LoginSteps extends BaseTest {
     	Assert.assertEquals(expectedMessage, "Epic sadface: Sorry, this user has been locked out.");
     	driver.close(); // Close the browser session
     	
+    }
+    
+    @When("I click on Logout")
+    public void clickOnLogout() {
+    	productPage.logOut();
+    }
+    
+    @Then("I go back to Login page") 
+    public void validateLoginPage() {
+    	WebElement loginButton = loginPage.getLoginButton();
+    	Assert.assertTrue(loginButton.isDisplayed());
     }
 }

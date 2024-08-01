@@ -16,15 +16,25 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+@login
 Feature: Check the login page functionalty
   
 
-  @tag2
+  @loginsuccesfull
   Scenario Outline: Login succesfully
     Given I am placed in the Login Page
     When I write a valid username <username> and a valid password <password>
     Then I validate the Product Page title <title>
+
+    Examples: 
+      | username      | password     | title    |
+      | standard_users | secret_sauce | Products |
+      
+  @logout
+  Scenario Outline: Logout succesfully
+    Given I am on the product page
+    When I click on Logout
+    Then I go back to Login page
 
     Examples: 
       | username      | password     | title    |

@@ -1,6 +1,8 @@
 package saucedemo.AbstractComponents;
 
 import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -36,6 +38,8 @@ public class AbstractComponents {
     @FindBy(className = "shopping_cart_link")
     WebElement shoppingCart;
     
+    @FindBy(id = "react-burger-menu-btn")
+    WebElement mainMenu;
     
     
     public WebElement getShoppingCart() {
@@ -58,5 +62,10 @@ public class AbstractComponents {
 		return cartPage;
     }
     
+    public void logOut() {
+    	WebElement logOut = driver.findElement(By.xpath("//a[@id=\"logout_sidebar_link\"]"));
+    	mainMenu.click();
+    	logOut.click();
+    }
     
 }

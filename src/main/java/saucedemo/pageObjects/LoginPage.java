@@ -40,8 +40,11 @@ public class LoginPage extends AbstractComponents {
     private WebElement errorMessage;
     
     
+    public WebElement getLoginButton() {
+		return loginButton;
+	}
 
-    public WebElement getErrorMessage() {
+	public WebElement getErrorMessage() {
 		return errorMessage;
 	}
 

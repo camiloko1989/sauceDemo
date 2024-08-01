@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-29T23:03:52 COT" name="Default suite" finished-at="2024-07-29T23:04:00 COT" duration-ms="8406">
+  <suite started-at="2024-07-31T21:56:01 COT" name="Default suite" finished-at="2024-07-31T21:56:05 COT" duration-ms="4197">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-07-29T23:03:52 COT" name="Default test" finished-at="2024-07-29T23:04:00 COT" duration-ms="8406">
+    <test started-at="2024-07-31T21:56:01 COT" name="Default test" finished-at="2024-07-31T21:56:05 COT" duration-ms="4197">
       <class name="cucumber.TestNGRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-29T23:03:52 COT" name="setUpClass" finished-at="2024-07-29T23:03:53 COT" duration-ms="711" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-31T21:56:01 COT" name="setUpClass" finished-at="2024-07-31T21:56:01 COT" duration-ms="622" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@3138953b]]>
+                <![CDATA[org.testng.TestRunner@656f62dc]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-29T23:03:53 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-29T23:03:57 COT" duration-ms="4148" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-31T21:56:01 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-31T21:56:05 COT" duration-ms="3469" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Login unsuccesfully"]]>
+                <![CDATA["Logout succesfully"]]>
               </value>
             </param>
             <param index="1">
@@ -34,26 +34,21 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "saucedemo.pageObjects.ProductPage.logOut()" because "this.productPage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "saucedemo.pageObjects.ProductPage.logOut()" because "this.productPage" is null
+at saucedemo.stepDefinitions.LoginSteps.clickOnLogout(LoginSteps.java:84)
+at ✽.I click on Logout(file:///C:/Users/camil/eclipse-workspace/SauceDemoProject/src/test/java/cucumber/Login.feature:36)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-29T23:03:57 COT" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-07-29T23:04:00 COT" duration-ms="3434" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Login with locked user"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Check the login page functionalty"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-29T23:04:00 COT" name="tearDownClass" finished-at="2024-07-29T23:04:00 COT" duration-ms="46" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:cucumber.TestNGRunner@5fbe4146]" started-at="2024-07-31T21:56:05 COT" name="tearDownClass" finished-at="2024-07-31T21:56:05 COT" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
